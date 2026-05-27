@@ -1,0 +1,39 @@
+{
+  "name": "z3-formula",
+  "version": "0.1.0",
+  "description": "Write Z3 SMT constraints as plain strings instead of chained API calls",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "example": "tsc -p tsconfig.example.json && node dist/example.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "z3",
+    "smt",
+    "solver",
+    "constraint",
+    "formula",
+    "satisfiability"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/z3-formula"
+  },
+  "dependencies": {
+    "jsep": "^1.3.8",
+    "z3-solver": "^4.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "z3-solver": ">=4"
+  }
+}
